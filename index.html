@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img src="./images/site-logo-white.png" alt="site-logo" />
+      <nav>
+        <ul>
+          <li><a href="#">MyDyson™</a></li>
+          <li><a href="#">Refurbished</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Til erhverv</a></li>
+          <li><a href="#">Aktivér garantien</a></li>
+        </ul>
+      </nav>
+      <div class="burger-menu" onclick="toggleMenu()">&#9776;</div>
+    </header>
+    <main>
+      <section class="top-presenting-section">
+        <video autoplay muted loop>
+          <source src="./videos/top-section-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="top-presenting-section-headline">
+          <img src="./images/d-airwrap.png" alt="d-airwrap" />
+          <p>Pioneers of Canada styling</p>
+          <h2>
+            The only multi-styler to curl, shape, and hide flyaways using the
+            Coanda effect.
+          </h2>
+          <p>Not extreme heat.</p>
+          <button class="top-section-btn">Shop now</button>
+        </div>
+      </section>
+
+      <section class="top-product-section">
+        <div class="top-product-left">
+          <p>Laveste prisgaranti</p>
+          <img src="./images/d-airwrap-complete-long.png" alt="d-airwrap" />
+          <div class="top-product-reviews">
+            <div class="stars-and-reviews">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <span>4.3/5</span>
+            <span id="reviews-count">9150 Anmeldelser</span>
+          </div>
+          <span class="top-product-left-section-stock-span">In stock</span>
+          <p>Vælg farve (3) - Blå / Kobber</p>
+          <ul class="top-product-left-section-list-items">
+            <li>
+              <span
+                ><a href="#"
+                  ><img
+                    src="./images/Nickel-Copper.png"
+                    alt="Nickel-Copper" /></a
+              ></span>
+            </li>
+            <li>
+              <span
+                ><a href="#"
+                  ><img
+                    src="./images/Fuchsia-Nickel.png"
+                    alt="Fuchsia-Nickel" /></a
+              ></span>
+            </li>
+            <li>
+              <span
+                ><a href="#"
+                  ><img
+                    src="./images/Prussian_blue-Rich_Copper.png"
+                    alt="Prussian_blue-Rich_Copper" /></a
+              ></span>
+            </li>
+          </ul>
+          <p class="top-product-left-section-price">3 990 kr</p>
+          <p class="top-product-left-section-bonus">
+            Ekstra tilbehør til en værdi af 520 kr er inkluderet
+          </p>
+          <button class="top-product-left-section-btn">
+            Læg i indkøbskurven
+          </button>
+        </div>
+        <div class="top-product-middle">
+          <img src="./images/multistyler.jpg" alt="multistyler" />
+        </div>
+        <div class="top-product-right">
+          <h3>Dyson Airwrap™ multistyler og hårtørrer Long (Blå/Kobber)</h3>
+          <p>Inkluderer nyudviklet tilbehør.</p>
+          <p>Til hår, der ha brystlængde eller længere.</p>
+          <p>Designet til flere hårtyper.</p>
+          <p class="top-product-right-description">
+            Med nye spoler til at krølle og bølge i begge retninger, børster til
+            at styre og forme og den multifunktionelle hårtørrer Coanda
+            smoothing dryer til at tørre, udglatte og skjule strittende
+            hårstrå.¹
+          </p>
+          <div class="top-product-right-svg-wrapper">
+            <div class="top-product-right-svg">
+              <div class="top-product-overlay-div"></div>
+              <div
+                class="top-product-svg-hold"
+                id="open-video"
+                onclick="openVideo()"
+              >
+                <img
+                  class="svg-images"
+                  src="./images/play-button.png"
+                  alt="play-icon"
+                />
+              </div>
+              <p>Watch video</p>
+              <div class="video-container">
+                <video class="video-player" controls>
+                  <source
+                    src="./videos/top-section-video.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <div onclick="closeVideo()" id="close-video">&times;</div>
+              </div>
+            </div>
+            <div class="top-product-right-svg">
+              <div class="top-product-overlay-div"></div>
+              <div
+                class="top-product-svg-hold"
+                id="open-gallery"
+                onclick="openGallery()"
+              >
+                <img
+                  class="svg-images"
+                  src="./images/camera-icon.png"
+                  alt="camera-icon"
+                />
+              </div>
+              <p>View gallery</p>
+              <div class="gallery-container">
+                <button id="prev-button" onclick="changeImage(-1)">&lt;</button>
+                <div class="image-gallery">
+                  <img
+                    src="./images/30mm-long-barrel.jpg"
+                    class="gallery-image"
+                  />
+                  <img
+                    src="./images/40mm-long-barrel.jpg"
+                    class="gallery-image"
+                  />
+                  <img
+                    src="./images/cleaning-brush.jpg"
+                    class="gallery-image"
+                  />
+                  <img
+                    src="./images/cleaning-brush.jpg"
+                    class="gallery-image"
+                  />
+                  <img
+                    src="./images/cleaning-brush.jpg"
+                    class="gallery-image"
+                  />
+                  <img
+                    src="./images/cleaning-brush.jpg"
+                    class="gallery-image"
+                  />
+                </div>
+                <button id="next-button" onclick="changeImage(1)">&gt;</button>
+                <div id="close-gallery-button" onclick="closeGallery()">
+                  &times;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="banner-section">
+        <div>
+          <h3>Til hår der er brystlængde eller længere</h3>
+          <p>
+            Inkluderer 30 mm og 40 mm Airwrap™ lange spoler. Eftersom de er 50%
+            længere end vores standardspoler, vikler de mere hår for at give en
+            lettere styling af langt hår. Oplev Dyson Airwrap™ Complete, hvis
+            dit hår er kortere end brystlængde.
+          </p>
+          <div class="banner-section-svg-wrapper">
+            <span class="banner-section-svg">
+              <img src="./images/right-arrow.png" alt="arrow-icon" />
+            </span>
+            <p>Køb Airwrap™ Complete</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-items-included">
+        <h3>Indhold i kassen</h3>
+        <div class="cols-wrapper">
+          <div class="cols-wrapper-col">
+            <img src="./images/multistyler.jpg" alt="multistyler" />
+            <span>
+              Dyson Airwrap™ multi-styler og hårtørrer Complete Long
+              (Blå/Kobber)
+            </span>
+          </div>
+          <div class="cols-wrapper-col">
+            <div class="cols-wrapper-col-item">
+              <img
+                src="./images/30mm-long-barrel.jpg"
+                alt="30mm-long-barrel-img"
+              />
+              <span>30mm Airwrap™ long barrels</span>
+              <img #arrow src="./images/arrow.png" alt="arrow-icon" />
+              <p>Skab og sæt voluminøse krøller.</p>
+            </div>
+            <div class="cols-wrapper-col-item">
+              <img src="./images/firm-smoothing.jpg" alt="firm-smoothing-img" />
+              <span>Firm Smoothing Brush Bu</span>
+            </div>
+            <div class="cols-wrapper-col-item">
+              <img
+                src="./images/volumissing-brush.jpg"
+                alt="volumissing-brush-img"
+              />
+              <span>Volumising Brush Bu</span>
+            </div>
+            <div class="cols-wrapper-col-item">
+              <img src="./images/dark-blue-case.jpg" alt="dark-blue-case-img" />
+              <span>Dark Blue presentation case</span>
+            </div>
+            <div class="cols-wrapper-col-item">
+              <img
+                src="./images/dark-blue-storage.jpg"
+                alt="dark-blue-storage-img"
+              />
+              <span>Opbevaringsetui</span>
+              <img #arrow src="./images/arrow.png" alt="arrow-icon" />
+              <p>Polstret med blødt stof og sikret med en magnetisk lås.</p>
+            </div>
+          </div>
+          <div class="cols-wrapper-col">
+            <div class="cols-wrapper-col-item">
+              <img
+                src="./images//40mm-long-barrel.jpg"
+                alt="40mm-long-barrel-img"
+              />
+              <span>40mm Airwrap™ long barrels</span>
+              <img #arrow src="./images/arrow.png" alt="arrow-icon" />
+              <p>Skab og sæt løse krøller eller bølger.</p>
+            </div>
+            <div class="cols-wrapper-col-item">
+              <img
+                src="./images/soft-smoothing-brush.jpg"
+                alt="soft-smoothing-brush-img"
+              />
+              <span>Soft Smoothing Brush Bu</span>
+            </div>
+            <div class="cols-wrapper-col-item">
+              <img src="./images/coanda-dryer.jpg" alt="coanda-dryer-img" />
+              <span>Coanda smoothing dryer</span>
+              <img #arrow src="./images/arrow.png" alt="arrow-icon" />
+              <p>
+                Multifunktionel vedhæftning til at tørre, glatte og skjule
+                flyveveje
+              </p>
+            </div>
+            <div class="cols-wrapper-col-item">
+              <img src="./images/cleaning-brush.jpg" alt="cleaning-brush-img" />
+              <span>Filterrensebørste</span>
+              <img #arrow src="./images/arrow.png" alt="arrow-icon" />
+              <p>pecialbørste til let filterrengøring.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery" data-flickity='{ "wrapAround": true }'>
+        <div class="gallery-cell" id="cell-1">
+          <div>
+            <p>Større kontrol²</p>
+            <h4>Coanda for at forme</h4>
+            <p>
+              Den forbedrede Coanda-luftstrøm tiltrækker håret til overfladen af
+              de nyudviklede børster for at forme dit hår med større kontrol, og
+              for glattere stylinger.
+            </p>
+          </div>
+        </div>
+        <div class="gallery-cell" id="cell-2">
+          <div>
+            <p>Increased control³</p>
+            <h4>Coanda to shape</h4>
+            <p>
+              Enhanced Coanda airflow attracts hair to the surface of our
+              re-engineered brushes to shape your hair with increased control³,
+              for straight styles.
+            </p>
+          </div>
+        </div>
+        <div class="gallery-cell" id="cell-3">
+          <div>
+            <p>Hide flyaways</p>
+            <h4>Coanda to smooth</h4>
+            <p>
+              Dry, smooth and hide flyaways with one multi-functional
+              attachment. Two jets of air work simultaneously on dry and
+              straight hair to smooth and perfect your end style, with up to 58%
+              less frizz and flyaways.⁴
+            </p>
+          </div>
+        </div>
+        <div class="gallery-cell" id="cell-4">
+          <div>
+            <p>Fast drying</p>
+            <h4>Focused airflow to dry</h4>
+            <p>
+              Powerful airflow quickly rough-dries hair in preparation for
+              styling.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="key-features">
+        <div class="key-features-heading">
+          <h3>Nøglefunktioner</h3>
+          <p>
+            Vælg den bedste luftstrømshastighed og varmeindstillinger til din
+            hårtype og styling.
+          </p>
+        </div>
+
+        <div class="key-features-controls">
+          <div>
+            <img
+              src="./images/Featurettes-Controls-Airflow.jpg"
+              alt="Featurettes-Controls-Airflow-img"
+            />
+            <h4>Luftstrømshastigheden</h4>
+            <p>
+              Tre præcise luftstrømshastigheder, der passer til din styling.
+            </p>
+          </div>
+          <div>
+            <img
+              src="./images/Featurettes-Controls-Temperature.jpg"
+              alt="Featurettes-Controls-Temperature-img"
+            />
+            <h4>Temperaturkontrol</h4>
+            <p>Tre præcise varmeindstillinger.</p>
+          </div>
+          <div>
+            <img
+              src="./images/Featurettes-Controls-ColdShot.jpg"
+              alt="Featurettes-Controls-ColdShot-img"
+            />
+            <h4>Cold shot</h4>
+            <p>
+              Deaktiverer øjeblikkeligt varmeelementet, så den køligere luft kan
+              fiksere frisuren.
+            </p>
+          </div>
+        </div>
+
+        <div class="key-features-case">
+          <div>
+            <h4>Etui i farven preussisk blå</h4>
+            <p>
+              Beskytter og opbevarer på flotteste vis din Dyson Airwrap™
+              multistyler og tilbehør. Designet i farven preussisk blå, polstret
+              med blødt stof og med et aftageligt låg, der også fungerer som en
+              skridsikker måtte til din multistyler.
+            </p>
+          </div>
+
+          <img
+            src="./images/Module-Case-closed.jpg"
+            alt="Module-Case-closed-img"
+          />
+        </div>
+      </section>
+
+      <section class="specifications">
+        <div class="specifications-wrapper">
+          <h3>Specifikationer</h3>
+          <div class="specifications-first-row">
+            <div>
+              <p>Ledningslængde</p>
+              <p>
+                <span>2,675</span>
+                <span>m</span>
+              </p>
+            </div>
+            <div>
+              <p>Luftstrøm</p>
+              <p>
+                <span>13,5</span>
+                <span>l/s</span>
+              </p>
+            </div>
+            <div>
+              <p></p>
+              <p>
+                <span>120V</span>
+              </p>
+            </div>
+            <div>
+              <p>Effekt</p>
+              <p>
+                <span>1 300</span>
+                <span>W</span>
+              </p>
+            </div>
+            <div>
+              <p>Vægt</p>
+              <p>
+                <span>0,592</span>
+                <span>kg</span>
+              </p>
+            </div>
+            <div>
+              <p>Negative ioner</p>
+              <p>
+                <span>Help reduce static</span>
+              </p>
+            </div>
+            <div>
+              <p>3 varmeindstillinger</p>
+              <p>
+                <span>3 heat, 3 speed</span>
+              </p>
+            </div>
+          </div>
+          <div class="specifications-second-row">
+            <div>
+              <div>
+                <p>Højde</p>
+                <p>
+                  <span>272</span>
+                  <span>mm</span>
+                </p>
+              </div>
+              <div>
+                <p>Længde</p>
+                <p>
+                  <span>41</span>
+                  <span>mm</span>
+                </p>
+              </div>
+              <div>
+                <p>Bredde</p>
+                <p>
+                  <span>48</span>
+                  <span>mm</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src="./images/curling-iron.png" alt="curling-iron-img" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="faq-wrapper">
+          <h2>FAQ</h2>
+          <div class="faq-q-a">
+            <div class="faq-q-a-item" onclick="toggleExpansion(1)">
+              <div>
+                <h3>
+                  Hvorfor er der forskellige Dyson Airwrap™ stylere og tilbehør?
+                </h3>
+                <img #arrow src="./images/arrow.png" alt="arrow-icon" />
+              </div>
+              <p>
+                Ikke alle har den samme hårtype - eller ønsker den samme stil.
+                Vi har derfor designet forskelligt tilbehør, der fungerer til
+                forskellige hårtyper og til at skabe forskellige stylinger. Vi
+                har udviklet to stylingsæt med tilbehør til specifikke hårtyper
+                samt et sæt med tilbehør til flere brugere eller styles.
+              </p>
+            </div>
+            <div class="faq-q-a-item" onclick="toggleExpansion(2)">
+              <div>
+                <h3>
+                  Hvilken hårlængde er Airwrap™ spolerne på henholdsvis 30 og 40
+                  mm designet til?
+                </h3>
+                <img #arrow src="./images/arrow.png" alt="arrow-icon" />
+              </div>
+              <p>
+                De lange spoler er specielt designet til hår, der er længere end
+                brystlængde. Er dit hår kortere end brystlængde, anbefaler vi de
+                kortere 30 mm Airwrap™ spoler og 40 mm Airwrap™ spoler. Både de
+                lange og kortere spoler kan fungere til langt hår, men du får de
+                bedste resultater, hvis du bruger den anbefalede spole til din
+                hårlængde.
+              </p>
+            </div>
+            <div class="faq-q-a-item" onclick="toggleExpansion(3)">
+              <div>
+                <h3>
+                  Kan jeg bruge hårtørreren Coanda smoothing dryer til enhver
+                  hårtype?
+                </h3>
+                <img #arrow src="./images/arrow.png" alt="arrow-icon" />
+              </div>
+              <p>
+                Coanda smoothing dryer har to indstillinger, Drying og
+                Smoothing. Drying mode kan bruges på enhver hårtype til at
+                fortørre hår eller fiksere færdige styles. Smoothing mode kan
+                bruges til at skjule strittende hårstrå og fungerer bedst på
+                naturligt glat eller bølget hår, eller glattet hår af enhver
+                type.
+              </p>
+            </div>
+            <div class="faq-q-a-item" onclick="toggleExpansion(4)">
+              <div>
+                <h3>Skal mit hår være vådt, inden jeg begynde at style?</h3>
+                <img #arrow src="./images/arrow.png" alt="arrow-icon" />
+              </div>
+              <p>
+                Ja. Begynd med nyvasket hår, da det giver de bedste resultater.
+                Alle vores børster kan bruges i vådt hår, men spolerne fungerer
+                bedst i fugtigt hår. Brug Coanda smoothing dryer i Drying mode
+                for at fugte håret før styling med spolerne.
+              </p>
+            </div>
+            <div class="faq-q-a-item" onclick="toggleExpansion(5)">
+              <div>
+                <h3>
+                  Vil dette nye tilbehør fungere med min eksisterende
+                  multistyler?
+                </h3>
+                <img #arrow src="./images/arrow.png" alt="arrow-icon" />
+              </div>
+              <p>
+                Ja, vores nyudviklede tilbehør er fuldt ud kompatible med alle
+                Dyson Airwrap™ multistylere.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <img src="./images/site-logo-white.png" alt="site-logo" />
+      <nav>
+        <ul>
+          <li><a href="#">MyDyson™</a></li>
+          <li><a href="#">Refurbished</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Til erhverv</a></li>
+          <li><a href="#">Aktivér garantien</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="./assets/script.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  </body>
+</html>
